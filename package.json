@@ -1,0 +1,7 @@
+{
+  "name": "macbook-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Thanik Bhongbhibhat <email@thanik.me>",
+  "license": "MIT"
+}
