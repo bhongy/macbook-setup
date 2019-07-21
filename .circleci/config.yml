@@ -12,11 +12,11 @@ jobs:
             - root-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
             # Fallback in case checksum fails
             - root-yarn-{{ .Branch }}-
-      - run: yarn --frozen-lockfile --cache-folder ~/.cache/yarn
+      - run: yarn --no-progress --frozen-lockfile
       - save_cache:
           paths:
             - node_modules
-            - ~/.cache/yarn
+            - website/node_modules
           key: root-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: GIT_USER=bhongy yarn publish-gh-pages
 
@@ -25,3 +25,6 @@ workflows:
   build_and_deploy:
     jobs:
       - deploy-website:
+          filters:
+            branches:
+              ignore: gh-pages
