@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  deploy-website:
+    docker:
+      - image: circleci/node:10.16
+    working_directory: ~/macbook-setup
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - root-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            # Fallback in case checksum fails
+            - root-yarn-{{ .Branch }}-
+      - run: yarn --frozen-lockfile --cache-folder ~/.cache/yarn
+      - save_cache:
+          paths:
+            - node_modules
+            - ~/.cache/yarn
+          key: root-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run: GIT_USER=bhongy yarn publish-gh-pages
