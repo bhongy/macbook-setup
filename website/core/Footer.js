@@ -40,18 +40,11 @@ class Footer extends React.Component {
             <a href={this.docUrl('doc1.html', this.props.language)}>
               Getting Started (or other categories)
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
-            </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href={this.docUrl('iterm2.html', this.props.language)}>
+              iTerm2
             </a>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
             <a
               href="https://stackoverflow.com/questions/tagged/"
               target="_blank"
@@ -107,18 +100,6 @@ class Footer extends React.Component {
           </div>
         </section>
 
-        <a
-          href="https://opensource.facebook.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="fbOpenSource">
-          <img
-            src={`${this.props.config.baseUrl}img/oss_logo.png`}
-            alt="Facebook Open Source"
-            width="170"
-            height="45"
-          />
-        </a>
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     );
