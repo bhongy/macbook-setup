@@ -25,8 +25,12 @@ sidebar_label: System Preferences
 
 ## Keyboard
 
-- fastest Key Repeat
-- shortest Delay Until Repeat
+```sh
+# needs to restart computer for it to take effect
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
+```
+
 - remove all Shortcuts except:
   - Move focus to next window
   - Save picture of screen as a file
@@ -38,7 +42,7 @@ sidebar_label: System Preferences
 
 ### Point & Click
 
-- uncheck all
+- uncheck all except: Point & Click - Secondary click (use Click in bottom right corner)
 - Lightest Click
 - Fastest Tracking speed
 
@@ -50,12 +54,18 @@ sidebar_label: System Preferences
 
 - Only Swipe between full-screen apps
 
+## Sound
+
+- Disable: Sound Effects -> Play user interface sound effects
+
 ## Touch ID
 
 - Unlocking your Mac
 - R-Ring / L-Ring / R-Index
 
+## Accessibility
 
+- Disable: Display -> Shake mouse pointer to locate
 
 
 
@@ -77,3 +87,18 @@ Next step: Configure iTerm2
 - VLC
 - Postman
 - Github Desktop
+
+## Chrome
+
+- Enable: Warn Before Quitting
+- Disable: Settings -> Offer to save passwords
+
+## Alfred
+
+- Enable: General -> Startup -> Launch Alfred at Login
+- General -> Alfred Hotkey Alt + Space
+- Appearance -> use theme Alfred macOS Dark
+- Appearance -> Options
+  - Hide hat on Alfred Window
+  - Hide menu bar icon
+  - Show Alfred on: active screen
