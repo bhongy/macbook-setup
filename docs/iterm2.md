@@ -49,4 +49,14 @@ Go to `preferences -> profile -> colors` and imports Color Preset. I use <a href
 
 - Semantic History: Open with editor -> VS Code
 
+## Tools via Homebrew
+
+- `tree`
+- `pstree`
+- `fd` find files
+- `watchman`
+- `jq`
+- `protobuf`
+- `kubernetes-cli`
+
 Next step: Configure VSCode
