@@ -33,6 +33,7 @@ const siteConfig = {
   projectName: 'macbook-setup',
   organizationName: 'bhongy',
 
+  noIndex: false,
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'iterm2', label: 'iTerm2'},
